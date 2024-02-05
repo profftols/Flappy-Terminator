@@ -25,16 +25,6 @@ public class Laser : Weapon
         Shoot();
     }
 
-    public void Reset()
-    {
-        Bullet[] bullets = FindObjectsOfType<Bullet>();
-
-        for (int i = 0; i < bullets.Length; i++)
-        {
-            Destroy(bullets[i].gameObject);
-        }
-    }
-
     protected override void Shoot()
     {
         if (Input.GetKeyDown(KeyCode.C))

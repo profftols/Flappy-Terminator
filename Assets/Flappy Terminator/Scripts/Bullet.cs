@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class Bullet : MonoBehaviour, IInteractable
 {
     public bool IsShipShoot;
@@ -21,9 +22,9 @@ public class Bullet : MonoBehaviour, IInteractable
         }
     }
     
-    public Ship GetShip(Ship ship)
+    public void GetShip(Ship ship)
     {
-        return _ship = ship;
+        _ship = ship;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
